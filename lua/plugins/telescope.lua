@@ -8,6 +8,5 @@ return {
 	cmd = "Telescope",
 	config = function()
 		require("telescope").setup({})
-		require("telescope").load_extension("yank_history")
 	end,
 }

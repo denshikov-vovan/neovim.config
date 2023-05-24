@@ -13,14 +13,21 @@ return {
 		wk.register({
 			e = { "<cmd>Neotree float reveal<cr>", "Neotree" },
 
-			f = {
-				name = "File",
+			s = {
+				name = "Search",
 
 				r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
 				f = { "<cmd>Telescope find_files<cr>", "Find files" },
 				b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 				s = { "<cmd>Telescope live_grep<cr>", "Find string" },
 				y = { "<cmd>lua require('telescope').extensions.yank_history.yank_history()<cr>", "Find yank" },
+			},
+
+			r = {
+				name = "Replace",
+
+				r = { "<cmd>MurenToggle<cr>", "Open" },
+				c = { "<cmd>MurenFresh<cr>", "Fresh" },
 			},
 
 			t = {
@@ -56,6 +63,8 @@ return {
 				g = { "<cmd>LazyGit<cr>", "Lazy git" },
 				p = { "<cmd>LazyGitFilter<cr>", "Project commits" },
 				f = { "<cmd>LazyGitFilterCurrentFile<cr>", "File commits" },
+				b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Git blame" },
+				d = { "<cmd>Gitsigns diffthis<cr>", "Diff" },
 			},
 		}, { prefix = "<leader>" })
 	end,
