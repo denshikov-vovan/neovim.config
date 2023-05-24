@@ -41,7 +41,9 @@ map("i", "<C-s>", "<esc><cmd>wa<cr>a", { desc = "Save All" })
 
 map("n", "<leader>qq", "<cmd>wqa<cr>", { desc = "Quit all" })
 
--- greatest remap ever
+map("n", "<C-d>", "<C-d>zz")
+map("v", "<C-d>", "<C-d>zz")
+
 map("n", "d", '"ad')
 map("v", "d", '"ad')
 map("n", "c", '"ac')

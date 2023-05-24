@@ -38,12 +38,12 @@ opt.incsearch = true
 -- spell check
 opt.spell = true
 opt.spelllang = "en_us"
-opt.spellfile = "/Users/vovan/.config/nvim/vim/spell/en.utf-8.add"
+opt.spellfile = "~/.config/nvim/vim/spell/en.utf-8.add"
 
 -- swap/undo files
 opt.swapfile = false
 opt.backup = false
-opt.undodir = "/Users/vovan/.config/nvim/vim/undodir"
+opt.undodir = "~/.config/nvim/vim/undodir"
 opt.undofile = true
 
 -- scrolloffs
@@ -54,8 +54,6 @@ opt.sidescrolloff = 8
 opt.cursorline = true -- highlight the current cursor line
 opt.colorcolumn = "120"
 
--- turn on termguicolors for colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift

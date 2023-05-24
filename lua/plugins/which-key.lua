@@ -27,7 +27,7 @@ return {
 				name = "Terminal",
 
 				f = { "<cmd>ToggleTerm direction=float<cr>", "Terminal float" },
-				h = { "<cmd>ToggleTerm direction=horizontal", "Terminal horizontal" },
+				h = { "<cmd>ToggleTerm direction=horizontal<cr>", "Terminal horizontal" },
 			},
 
 			b = {
