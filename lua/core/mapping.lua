@@ -44,6 +44,9 @@ map("n", "<leader>qq", "<cmd>wqa<cr>", { desc = "Quit all" })
 map("n", "<C-d>", "<C-d>zz")
 map("v", "<C-d>", "<C-d>zz")
 
+map("n", "<C-u>", "<C-u>zz")
+map("v", "<C-u>", "<C-u>zz")
+
 map("n", "d", '"ad')
 map("v", "d", '"ad')
 map("n", "c", '"ac')
