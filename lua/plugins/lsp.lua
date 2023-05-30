@@ -139,7 +139,7 @@ return {
 			},
 			ensure_installed = {
 				"eslint-lsp",
-				"json-lsp",
+				-- "json-lsp",
 				"typescript-language-server",
 				"vue-language-server",
 				"tailwindcss-language-server",

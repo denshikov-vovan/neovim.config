@@ -21,14 +21,34 @@ return {
 		},
 	},
 	config = function()
+		local define = vim.fn.sign_define
+
 		vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
-		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-		vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
-		vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
+		define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+		define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+		define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+		define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
 
-		require("neo-tree").setup({})
+		require("neo-tree").setup({
+			default_component_configs = {
+				git_status = {
+					symbols = {
+						-- Change type
+						added = "A",
+						modified = "M",
+						deleted = "D",
+						renamed = "R",
+						-- Status type
+						uuntracked = "",
+						ignored = "",
+						unstaged = "󰀥",
+						staged = "",
+						conflict = "",
+					},
+				},
+			},
+		})
 	end,
 	cmd = "Neotree",
 }

@@ -33,7 +33,12 @@ return {
 				header = default_header(),
 				center = {
 					{ icon = "󰙅 ", desc = "Open tree", key = "e", action = ":Neotree float" },
-					{ icon = " ", desc = "Recent files", key = "r", action = ":Telescope oldfiles" },
+					{
+						icon = " ",
+						desc = "Recent files",
+						key = "r",
+						action = ":lua require('telescope').extensions.recent_files.pick()",
+					},
 					{ icon = " ", desc = "Find files", key = "f", action = ":Telescope find_files" },
 					{ icon = " ", desc = "Find text", key = "w", action = ":Telescope live_grep" },
 				},

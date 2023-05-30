@@ -20,21 +20,21 @@ return {
 
 				null_ls.builtins.formatting.eslint_d,
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.prettierd.with({
-					filetypes = {
-						"css",
-						"scss",
-						"less",
-						"html",
-						"json",
-						"jsonc",
-						"yaml",
-						"markdown",
-						"markdown.mdx",
-						"graphql",
-						"handlebars",
-					},
-				}),
+				-- null_ls.builtins.formatting.prettierd.with({
+				-- 	filetypes = {
+				-- 		"css",
+				-- 		"scss",
+				-- 		"less",
+				-- 		"html",
+				-- 		-- "json",
+				-- 		"jsonc",
+				-- 		"yaml",
+				-- 		"markdown",
+				-- 		"markdown.mdx",
+				-- 		"graphql",
+				-- 		"handlebars",
+				-- 	},
+				-- }),
 			},
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then

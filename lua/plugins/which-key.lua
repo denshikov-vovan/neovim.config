@@ -16,11 +16,12 @@ return {
 			s = {
 				name = "Search",
 
-				r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
+				r = { "<cmd>lua require('telescope').extensions.recent_files.pick()<cr>", "Recent files" },
 				f = { "<cmd>Telescope find_files<cr>", "Find files" },
 				b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 				s = { "<cmd>Telescope live_grep<cr>", "Find string" },
 				y = { "<cmd>lua require('telescope').extensions.yank_history.yank_history()<cr>", "Find yank" },
+				p = { "<cmd>Telescope package_info<cr>", "NPM package info" },
 			},
 
 			r = {

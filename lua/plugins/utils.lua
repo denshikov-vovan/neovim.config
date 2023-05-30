@@ -1,19 +1,5 @@
 return {
 	{
-		"windwp/nvim-autopairs",
-		opts = {},
-	},
-	{
-		"terrortylor/nvim-comment",
-		config = function()
-			require("nvim_comment").setup({})
-		end,
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		opts = {},
-	},
-	{
 		"ethanholz/nvim-lastplace",
 		config = function()
 			require("nvim-lastplace").setup({
@@ -54,13 +40,13 @@ return {
 		},
 		opts = {},
 	},
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-		opts = {},
-	},
+	-- {
+	-- 	"folke/noice.nvim",
+	-- 	event = "VeryLazy",
+	-- 	dependencies = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"rcarriga/nvim-notify",
+	-- 	},
+	-- 	opts = {},
+	-- },
 }

@@ -34,14 +34,12 @@ return {
 				["<Down>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
-				["<C-y>"] = cmp.config.disable,
-				["<C-Space>"] = cmp.mapping.complete(),
-				["<C-e>"] = cmp.mapping.abort(),
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<C-d>"] = cmp.mapping.abort(),
+				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp", priority = 1000 },
-				{ name = "luasnip", priority = 750 },
+				-- { name = "luasnip", priority = 750 },
 				{ name = "buffer", priority = 500 },
 				{ name = "path", priority = 250 },
 			}, {
