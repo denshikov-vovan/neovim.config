@@ -15,9 +15,6 @@ return {
 	},
 	{
 		"gbprod/yanky.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-		},
 		opts = {
 			highlight = {
 				on_put = true,
@@ -27,7 +24,6 @@ return {
 		},
 		config = function(opts)
 			require("yanky").setup(opts)
-			require("telescope").load_extension("yank_history")
 		end,
 	},
 	{

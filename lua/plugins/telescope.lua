@@ -5,8 +5,9 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"BurntSushi/ripgrep",
-			"smartpde/telescope-recent-files",
-			"vuki656/package-info.nvim",
+			{ "smartpde/telescope-recent-files", opts = {} },
+			{ "vuki656/package-info.nvim", opts = {} },
+			"gbprod/yanky.nvim",
 		},
 		cmd = "Telescope",
 		config = function()
@@ -22,13 +23,12 @@ return {
 							"/node_modules",
 						},
 					},
-					lazy = {},
-					package_info = {
-						theme = "ivy",
-					},
+					package_info = {},
+					yank_history = {},
 				},
 			})
 
+			telescope.load_extension("yank_history")
 			telescope.load_extension("recent_files")
 			telescope.load_extension("package_info")
 		end,
