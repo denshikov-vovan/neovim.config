@@ -38,12 +38,12 @@ opt.incsearch = true
 -- spell check
 opt.spell = true
 opt.spelllang = "en_us"
-opt.spellfile = "~/.config/nvim/vim/spell/en.utf-8.add"
+opt.spellfile = "/Users/vovan/.config/nvim/vim/spell/en.utf-8.add"
 
 -- swap/undo files
 opt.swapfile = false
 opt.backup = false
-opt.undodir = "~/.config/nvim/vim/undodir"
+opt.undodir = "/Users/vovan/.config/nvim/vim/undodir"
 opt.undofile = true
 
 -- scrolloffs
