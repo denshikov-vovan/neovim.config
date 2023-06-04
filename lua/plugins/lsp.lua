@@ -33,23 +33,22 @@ return {
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
-          local mapOpts = { buffer = ev.buf }
           local map = vim.keymap.set
           local lspBuf = vim.lsp.buf
 
-          map("n", "gD", lspBuf.declaration, mapOpts)
-          map("n", "gd", lspBuf.definition, mapOpts)
-          map("n", "gi", lspBuf.implementation, mapOpts)
-          map("n", "gr", lspBuf.references, mapOpts)
+          map("n", "gD", lspBuf.declaration, { buffer = ev.buf, desc = 'Go to declaration' })
+          map("n", "gd", lspBuf.definition, { buffer = ev.buf, desc = 'Go to definition' })
+          map("n", "gi", lspBuf.implementation, { buffer = ev.buf, desc = 'Go to implementation' })
+          map("n", "gr", lspBuf.references, { buffer = ev.buf, desc = 'Go to reference' })
 
-          map("n", "K", lspBuf.hover, mapOpts)
-          map("n", "<C-k>", lspBuf.signature_help, mapOpts)
-          map("n", "<space>D", lspBuf.type_definition, mapOpts)
-          map("n", "<space>rn", lspBuf.rename, mapOpts)
-          map({ "n", "v" }, "<space>ca", lspBuf.code_action, mapOpts)
+          map("n", "K", lspBuf.hover, { buffer = ev.buf, desc = 'Hover info' })
+          map("n", "<C-k>", lspBuf.signature_help, { buffer = ev.buf, desc = 'Signature help' })
+          map("n", "<space>D", lspBuf.type_definition, { buffer = ev.buf, desc = 'Type definition' })
+          map("n", "<leader>rn", lspBuf.rename, { buffer = ev.buf, desc = 'Rename' })
+          map({ "n", "v" }, "<space>ca", lspBuf.code_action, { buffer = ev.buf, desc = 'Code action' })
           map("n", "<space>f", function()
             lspBuf.format({ async = true })
-          end, mapOpts)
+          end, { buffer = ev.buf, desc = "Format code" })
         end,
       })
 

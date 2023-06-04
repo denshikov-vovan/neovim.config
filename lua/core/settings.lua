@@ -36,11 +36,6 @@ opt.smartcase = true
 -- opt.hlsearch = false
 opt.incsearch = true
 
--- spell check
-opt.spell = true
-opt.spelllang = "en_us"
-opt.spellfile = "/Users/vovan/.config/nvim/vim/spell/en.utf-8.add"
-
 -- swap/undo files
 opt.swapfile = false
 opt.backup = false
@@ -57,7 +52,7 @@ opt.colorcolumn = "120"
 
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
+opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
