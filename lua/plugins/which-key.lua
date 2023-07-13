@@ -26,6 +26,11 @@ return {
         D = { "<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Full diagnostic" },
       },
 
+      h = {
+        a = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add file" },
+        h = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Show files" },
+      },
+
       t = {
         name = "Terminal",
 
@@ -51,6 +56,7 @@ return {
         l = { "<cmd>Lazy<cr>", "Lazy" },
         m = { "<cmd>Mason<cr>", "Mason" },
         e = { "<cmd>Neotree reveal<cr>", "Explorer" },
+        g = { "<cmd>VimBeGood<cr>", "Game VIM be good" },
       },
 
       g = {

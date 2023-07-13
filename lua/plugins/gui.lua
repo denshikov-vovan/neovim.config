@@ -20,4 +20,7 @@ return {
     },
     opts = {},
   },
+  {
+    "kshenoy/vim-signature",
+  },
 }

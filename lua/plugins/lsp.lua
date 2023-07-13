@@ -11,7 +11,7 @@ return {
       diagnostics = {
         underline = true,
         update_in_insert = false,
-        virtual_text = { spacing = 4, prefix = "●" },
+        virtual_text = { spacing = 2, prefix = "●" },
         severity_sort = true,
       },
       autoformat = true,
@@ -36,19 +36,23 @@ return {
           local map = vim.keymap.set
           local lspBuf = vim.lsp.buf
 
-          map("n", "gD", lspBuf.declaration, { buffer = ev.buf, desc = 'Go to declaration' })
-          map("n", "gd", lspBuf.definition, { buffer = ev.buf, desc = 'Go to definition' })
-          map("n", "gi", lspBuf.implementation, { buffer = ev.buf, desc = 'Go to implementation' })
-          map("n", "gr", lspBuf.references, { buffer = ev.buf, desc = 'Go to reference' })
+          map("n", "gD", lspBuf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
+          map("n", "gd", lspBuf.definition, { buffer = ev.buf, desc = "Go to definition" })
+          map("n", "gi", lspBuf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
+          map("n", "gr", lspBuf.references, { buffer = ev.buf, desc = "Go to reference" })
 
-          map("n", "K", lspBuf.hover, { buffer = ev.buf, desc = 'Hover info' })
-          map("n", "<C-k>", lspBuf.signature_help, { buffer = ev.buf, desc = 'Signature help' })
-          map("n", "<space>D", lspBuf.type_definition, { buffer = ev.buf, desc = 'Type definition' })
-          map("n", "<leader>rn", lspBuf.rename, { buffer = ev.buf, desc = 'Rename' })
-          map({ "n", "v" }, "<space>ca", lspBuf.code_action, { buffer = ev.buf, desc = 'Code action' })
+          map("n", "K", lspBuf.hover, { buffer = ev.buf, desc = "Hover info" })
+          map("n", "<C-k>", lspBuf.signature_help, { buffer = ev.buf, desc = "Signature help" })
+          map("n", "<space>D", lspBuf.type_definition, { buffer = ev.buf, desc = "Type definition" })
+          map("n", "<leader>rn", lspBuf.rename, { buffer = ev.buf, desc = "Rename" })
+          map({ "n", "v" }, "<space>ca", lspBuf.code_action, { buffer = ev.buf, desc = "Code action" })
           map("n", "<space>f", function()
             lspBuf.format({ async = true })
           end, { buffer = ev.buf, desc = "Format code" })
+
+          map("n", "<space>ld", function()
+            vim.diagnostic.open_float({ focusable = false })
+          end, { buffer = ev.buf, desc = "Diagnostic info" })
         end,
       })
 
@@ -68,8 +72,7 @@ return {
       vim.diagnostic.config(opts.diagnostics)
 
       local servers = opts.servers
-      local capabilities =
-          require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+      local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
       local function setup(server)
         local server_opts = vim.tbl_deep_extend("force", {
@@ -145,7 +148,7 @@ return {
         "vue-language-server",
         "tailwindcss-language-server",
         "stylua",
-        "shellcheck",
+        -- "shellcheck",
         "flake8",
       },
     },

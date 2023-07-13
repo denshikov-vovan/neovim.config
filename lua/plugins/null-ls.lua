@@ -17,16 +17,16 @@ return {
       sources = {
         cspell.diagnostics.with({ config = c_spell_config }),
         null_ls.builtins.diagnostics.tsc,
-        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.diagnostics.stylelint,
         null_ls.builtins.diagnostics.puglint,
         null_ls.builtins.diagnostics.luacheck,
         null_ls.builtins.diagnostics.flake8,
 
-        null_ls.builtins.code_actions.eslint,
+        null_ls.builtins.code_actions.eslint_d,
         cspell.code_actions.with({ config = c_spell_config }),
 
-        null_ls.builtins.formatting.eslint,
+        null_ls.builtins.formatting.eslint_d,
         null_ls.builtins.formatting.stylua,
       },
       on_attach = function(client, bufnr)

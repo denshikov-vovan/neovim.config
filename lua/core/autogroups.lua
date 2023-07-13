@@ -1,0 +1,7 @@
+-- vim.api.nvim_command([[
+-- augroup LspPopup
+--   autocmd!
+--   autocmd CursorHold * lua require('vim.lsp.diagnostic').show_line_diagnostics({ focusable = false })
+--   autocmd CursorMoved * lua require('vim.lsp.diagnostic').clear()
+-- augroup END
+-- ]])
