@@ -19,9 +19,7 @@ return {
         formatting_options = nil,
         timeout_ms = nil,
       },
-      servers = {
-        eslint = {},
-      },
+      servers = {},
       setup = {},
     },
     config = function(plugin, opts)
@@ -46,7 +44,8 @@ return {
           map("n", "<space>D", lspBuf.type_definition, { buffer = ev.buf, desc = "Type definition" })
           map("n", "<leader>rn", lspBuf.rename, { buffer = ev.buf, desc = "Rename" })
           map({ "n", "v" }, "<space>ca", lspBuf.code_action, { buffer = ev.buf, desc = "Code action" })
-          map("n", "<space>f", function()
+
+          map("n", "<space>lf", function()
             lspBuf.format({ async = true })
           end, { buffer = ev.buf, desc = "Format code" })
 
@@ -143,13 +142,21 @@ return {
       },
       ensure_installed = {
         "eslint-lsp",
-        -- "json-lsp",
+        "json-lsp",
         "typescript-language-server",
         "vue-language-server",
         "tailwindcss-language-server",
+        "bash-language-server",
+        "lua-language-server",
+        "python-lsp-server",
+        "svelte-language-server",
+        "yaml-language-server",
+        "editorconfig-checker",
         "stylua",
-        -- "shellcheck",
+        "rust-analyzer",
         "flake8",
+        "cspell",
+        "jsonlint"
       },
     },
     config = function(plugin, opts)
