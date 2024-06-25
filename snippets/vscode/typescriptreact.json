@@ -1,0 +1,21 @@
+{
+  "React functional component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "interface Props {",
+      "  ${2:className?: string;}",
+      "}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC<Props> = ({",
+      "  ${3:className = ''}",
+      "}) => {",
+      "  return (",
+      "    ${4}",
+      "  );",
+      "};"
+    ],
+    "description": "React functional component"
+  }
+}

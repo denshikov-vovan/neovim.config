@@ -36,4 +36,7 @@ return {
     },
     opts = {},
   },
+  {
+    "echasnovski/mini.nvim"
+  },
 }

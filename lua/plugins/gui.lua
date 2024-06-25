@@ -9,10 +9,10 @@ return {
       require("nvim_comment").setup({})
     end,
   },
-  {
-    "lewis6991/gitsigns.nvim",
-    opts = {},
-  },
+  -- {
+  --   "lewis6991/gitsigns.nvim",
+  --   opts = {},
+  -- },
   {
     "vuki656/package-info.nvim",
     dependencies = {

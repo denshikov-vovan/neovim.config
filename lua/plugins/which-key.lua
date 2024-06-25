@@ -11,7 +11,7 @@ return {
     wk.setup({})
 
     wk.register({
-      e = { "<cmd>Neotree float reveal<cr>", "Neotree" },
+      e = { "<cmd>Neotree reveal<cr>", "Neotree" },
 
       s = {
         name = "Search",
@@ -24,6 +24,8 @@ return {
         p = { "<cmd>Telescope package_info<cr>", "NPM package info" },
         d = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<cr>", "Diagnostic" },
         D = { "<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Full diagnostic" },
+        k = { "<cmd>lua require('telescope.builtin').keymaps()<cr>", "Key map" },
+        c = { "<cmd>nohlsearch<cr>", "Clear search"}
       },
 
       h = {
@@ -67,7 +69,7 @@ return {
         f = { "<cmd>LazyGitFilterCurrentFile<cr>", "File commits" },
         b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Git blame" },
         d = { "<cmd>Gitsigns diffthis<cr>", "Diff" },
-      },
+      }
     }, { prefix = "<leader>" })
   end,
 }

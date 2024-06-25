@@ -10,6 +10,8 @@ return {
     "hrsh7th/vim-vsnip",
     "hrsh7th/vim-vsnip-integ",
     "hrsh7th/cmp-nvim-lsp-signature-help",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip"
   },
   config = function()
     local cmp = require("cmp")
@@ -22,7 +24,7 @@ return {
     cmp.setup({
       snippet = {
         expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body)           -- For `vsnip` users.
+          require('luasnip').lsp_expand(args.body)
         end,
       },
       window = {
@@ -38,8 +40,8 @@ return {
         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
+        { name = "luasnip",  priority = 1500 },
         { name = "nvim_lsp", priority = 1000 },
-        -- { name = "luasnip", priority = 750 },
         { name = "buffer",   priority = 500 },
         { name = "path",     priority = 250 },
       }, {

@@ -1,12 +1,16 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  branch = "v2.x",
+  branch = "v3.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
+    "3rd/image.nvim",
     {
       "s1n7ax/nvim-window-picker",
+      name = 'window-picker',
+      event = 'VeryLazy',
+      version = '2.*',
       opts = {
         autoselect_one = true,
         include_current = false,
